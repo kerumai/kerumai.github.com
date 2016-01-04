@@ -1,21 +1,21 @@
 # Site settings
-title:       Pixyll
-email:       your_email@example.com
-author:      John Otander
-description: "A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff."
+title:       How to Get Ahead in Software Engineering
+email:       
+author:      Mike Smith
+description: "Thoughts on life as a software engineer"
 baseurl:     ""
-url:         "http://pixyll.com"
+url:         "https://kerumai.com"
 date_format: "%b %-d, %Y"
 
 # Google services
-google_analytics:
-google_verification:
+google_analytics: UA-17664632-2
+google_verification: qlI4QHowIiDF7jhvrJvwVfSKhZ1g7kcPb4rBgWpuntw
 
 # Optional features
 animated:             false
 show_related_posts:   false
 show_post_footers:    false
-show_social_icons:    false
+show_social_icons:    true
 ajaxify_contact_form: false
 
 # Disqus post comments
@@ -29,12 +29,12 @@ facebook_appid:
 facebook_comments_number: 10
 
 # Social icons
-github_username:
+github_username: kerumai
 bitbucket_username:
 stackoverflow_id:
-twitter_username:
+twitter_username: kerumai
 google_plus_id:
-linkedin_username:
+linkedin_username: kerumai
 angellist_username:
 medium_id:
 bitcoin_url:
@@ -42,11 +42,11 @@ paypal_url:
 flattr_button:
 
 # Post sharing icons
-show_sharing_icons: false
+show_sharing_icons: true
 share_text: 'Share this post!'
 # Change to 'true' to enable individual icons
 share_facebook: false
-share_twitter: false
+share_twitter: true
 share_googleplus: false
 share_linkedin: false
 share_digg: false
