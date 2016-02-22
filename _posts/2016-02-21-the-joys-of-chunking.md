@@ -4,7 +4,7 @@ title:      How I Learned to Stop Worrying and Love the Chunks
 date:       2016-02-21 18:29:00
 summary:    HTTP Chunked encoding is a simple and under-used tool.
 categories: engineering
-published: true
+published: false
 ---
 
 So I was doing some investigations around HTTP/2 recently and went off on a slight tangent around optimizing initial browser page load. And for maybe the 3rd time in the past few years, I ended up finding __chunked encoding__ to be really useful.
