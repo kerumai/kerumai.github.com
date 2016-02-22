@@ -42,6 +42,12 @@
     <meta name="twitter:description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}" />
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
 
+    {% if page.image %}
+      <meta name="twitter:image:src" content="{{ site.url }}/assets/{{ page.image }}">
+    {% else %}
+      <meta name="twitter:image:src" content="{{ site.url }}/assets/mike.jpg">
+    {% endif %}
+
     <!-- Icons -->
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
 
