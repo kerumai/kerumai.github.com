@@ -1,5 +1,5 @@
 # Site settings
-title:       What I Think About When I Think About Software
+title:       What I Think About When I Think About Engineering
 email:       
 author:      Mike Smith
 description: "Thoughts on life as a software engineer"
@@ -20,7 +20,7 @@ ajaxify_contact_form: false
 
 # Disqus post comments
 # (leave blank to disable Disqus)
-disqus_shortname:
+disqus_shortname: kerumai
 
 # Facebook Comments plugin
 # (leave blank to disable Facebook Comments, otherwise set it to true)
