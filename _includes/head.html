@@ -9,12 +9,22 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl }}" />
 
+
+    <!-- Do some preconnecting to 3rd party domains -->
+    <link rel="preconnect" href="http://www.google-analytics.com">
+    <link rel="preconnect" href="https://ssl.google-analytics.com">
+
+    <link rel="preconnect" href="http://kerumai.disqus.com">
+    <link rel="preconnect" href="http://disqus.com">
+    <link rel="preconnect" href="http://a.disquscdn.com">
+    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/resources/css/pixyll.css" | prepend: site.baseurl }}?{{ site.time | date: "%Y%m%d%H%M" }}" type="text/css">
 
     <!-- Fonts -->
-    <link href='/resources/css/fonts.googleapis.com_css_family_Merriweather_900_900italic_300_300italic.css' rel='stylesheet' type='text/css'>
-    <link href='/resources/css/fonts.googleapis.com_css_family_Lato_900_300.css' rel='stylesheet' type='text/css'>
+    <!--<link href='/resources/css/fonts.googleapis.com_css_family_Merriweather_900_900italic_300_300italic.css' rel='stylesheet' type='text/css'>
+    <link href='/resources/css/fonts.googleapis.com_css_family_Lato_900_300.css' rel='stylesheet' type='text/css'>-->
     {% if site.show_social_icons or site.show_sharing_icons %}
       <link href="/resources/css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
     {% endif %}
@@ -34,19 +44,20 @@
     <meta property="og:site_name" content="{{ site.title | xml_escape }}">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary" />
+    {% if page.image %}
+      <meta name="twitter:card" content="summary_large" />
+      <meta name="twitter:image:src" content="{{ site.url }}/assets/{{ page.image }}">
+    {% else %}
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:image:src" content="{{ site.url }}/assets/mike.jpg">
+    {% endif %}    
+    
     {% if site.twitter_username %}
         <meta name="twitter:site" content="@{{ site.twitter_username }}" />
     {% endif %}
     <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
     <meta name="twitter:description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}" />
     <meta name="twitter:url" content="{{ site.url }}{{ page.url }}" />
-
-    {% if page.image %}
-      <meta name="twitter:image:src" content="{{ site.url }}/assets/{{ page.image }}">
-    {% else %}
-      <meta name="twitter:image:src" content="{{ site.url }}/assets/mike.jpg">
-    {% endif %}
 
     <!-- Icons -->
     <link rel="icon" href="data:;base64,iVBORw0KGgo=">
