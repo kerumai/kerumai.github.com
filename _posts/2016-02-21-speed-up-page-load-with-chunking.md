@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Speeding up Page Load with Chunked Encoding
+title:      Speeding up Page Load with Chunking
 date:       2016-02-21 18:29:00
 summary:    Some techniques for using HTTP Chunked Encoding & Link Prefetching to speed up page load times
 categories: engineering
@@ -8,7 +8,7 @@ image:      cooper-sailor-2.png
 published:  true
 ---
 
-So I was doing some investigations around HTTP/2 recently and went off on a slight tangent around optimizing browser page load times. And for maybe the 3rd time in the past few years, I ended up finding __flushing early with chunked encoding__ to be really useful. So I'm writing some of this down here in the hope that someone else finds it useful too.
+I was doing some investigations around HTTP/2 recently and went off on a slight tangent around optimizing browser page load times. And for maybe the 3rd time in the past few years, I ended up finding __flushing early with chunked encoding__ to be really useful. So I'm writing some of this down here in the hope that someone else finds it useful too.
 
 ## Techniques
 
@@ -33,11 +33,10 @@ This can also work really well in combination with [link prefetch/preconnect/dns
 
 ### Example Site
 
-I setup a little sample site to demonstrate this. It's just a modified version of this [clean jekyll template](http://jekyllthemes.org/themes/clean/) served through some custom netty code I have running on an EC2 instance which I use to insert a 1 second delay between flushing the first and second chunks.
+I setup a little sample site to demonstrate this. It's just a modified version of this [clean jekyll template](http://jekyllthemes.org/themes/clean/) served through some custom netty code I have running on an EC2 instance which I use to insert a half second delay between flushing the first and second chunks.
 
-The purpose is to simulate a page that takes 1 second to generate, and show you the difference in time to the page being _'ready'_, with flushing the head early vs not. 
-Choosing when a page is ready can be very specific to the site in question, but for this I've inserted a [performance timing mark](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark) - "rum_page_ready" - at the point when the jquery and custom js files have been downloaded and processed, and the DOM is ready. And I also print this out into the page in a wonderful `<marquee>` tag.
-
+The purpose is to simulate a page that is slow to generate, and show you the difference in time to the page being _'ready'_, with flushing the head early vs not. 
+Choosing when a page is ready can be very specific to the site in question, but for this I've inserted a [performance timing mark](https://developer.mozilla.org/en-US/docs/Web/API/Performance/mark) - "rum_page_ready" - at the point when the jquery and custom js files have been downloaded and processed, and the DOM is ready. And I also print this out into the page in a wonderful `<marquee>` tag :)
 
 Here's the [site with fast flushing of the head](http://ec2-54-213-91-136.us-west-2.compute.amazonaws.com/clean/)
 And here it is [without flushing](http://ec2-54-213-91-136.us-west-2.compute.amazonaws.com/clean/?chunked=false)
@@ -45,23 +44,24 @@ And here it is [without flushing](http://ec2-54-213-91-136.us-west-2.compute.ama
 As well as flushing the head early, a few other things I'm doing of note in the sample are:
 
 - Using link prefetch for the hero image and font file, in the head. This gets the browser to start downloading them immediately, and storing them in cache, with them then being pulled from the browser cache when CSS chooses to use them.
-  - This is a bit hit and miss due to _prefetch_ being a hint rather than a command. But once [_preload_](https://www.w3.org/TR/preload/) (come on Ilya!) is here, we can use that reliably instead.
+  - This is a bit hit and miss due to _prefetch_ being a hint rather than a command. But once [_preload_](https://www.w3.org/TR/preload/) is here (come on Ilya!), we can use that reliably instead.
 - Using `<script defer>` for the 2 JS files in the head. This gets the browser to download them early, but not block rendering to process them until after page finished loading.
 
 Now taking a look at the webpagetest runs for each, you can see the impact. Note that I ran these using webpagetest's simulated "Mobile 3G" connection on Chrome, running from the US east coast to AWS on the west coast to represent a reasonable bad connection.
 
-#### Results w/ Fast Flushing
+#### Results with Fast Flushing
 
+Can see that most of the assets have finished downloading in the gap between the first head chunk and the rest of the body.
+The rum_page_ready time was 0.925 secs:
+![Waterfall for fast flushed](/assets/waterfall-fast-flushed.png)
+<http://www.webpagetest.org/result/160222_J5_GB5/2/details/>
 
-<http://www.webpagetest.org/result/160222_6Q_DVA/>
+#### Results without Flushing
 
-
-- screenshots and links for the webpagestest runs. 
-- point out the main timings, and describe why the difference.
-
-
-
-
+You can see that all the page assets don't start to get downloaded until _after_ the page has been fully downloaded.
+The rum_page_ready time was 1.13 secs:
+![Waterfall for no flushing](/assets/waterfall-no-flushing.png)
+<http://www.webpagetest.org/result/160222_8Z_GB8/2/details/>
 
 
 Here's the source, although there's nothing much special about the code: <https://github.com/kerumai/chunking>

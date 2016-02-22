@@ -7,5 +7,7 @@ categories: engineering
 published: true
 ---
 
-Going to start writing some posts, because I think I'm finally starting to have some things to say :)
+Going to start writing some posts, because I think I'm finally starting to have some things to say.
+
+But not today. Maybe tomorrow ;)
 
