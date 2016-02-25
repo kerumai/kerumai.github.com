@@ -2,13 +2,12 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{% if page.title %}{{ page.title | strip_html }} &#8211; {% endif %}{{ site.title | strip_html }}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <meta name="description" content="{% if page.summary %}{{ page.summary | xml_escape }}{% else %}{{ site.description | xml_escape }}{% endif %}">
     <meta name="author" content="{{ site.author }}">
     {% if page.categories %}<meta name="keywords" content="{{ page.categories | join: ', ' }}">{% endif %}
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for {{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl }}" />
-
 
     <!-- Do some preconnecting to 3rd party domains -->
     <link rel="preconnect" href="http://www.google-analytics.com">
@@ -17,7 +16,6 @@
     <link rel="preconnect" href="http://kerumai.disqus.com">
     <link rel="preconnect" href="http://disqus.com">
     <link rel="preconnect" href="http://a.disquscdn.com">
-    
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/resources/css/pixyll.css" | prepend: site.baseurl }}?{{ site.time | date: "%Y%m%d%H%M" }}" type="text/css">
@@ -69,4 +67,20 @@
     </script>
     <script async defer src='/resources/scripts/google-analytics-2016-01-03.js'></script>
     {% endif %}
+
+    <!-- LD for google search -->
+    <script type="application/ld+json">
+        {
+          "@context" : "http://schema.org",
+          "@type" : "Person",
+          "name" : "Mike Smith",
+          "url" : "{{ site.url }}",
+          "sameAs" : [
+            "http://www.twitter.com/kerumai",
+            "http://www.linkedin.com/in/kerumai"
+          ],
+          "logo": "{{ site.url }}/assets/mike.jpg"
+        }
+    </script>
+
 </head>
