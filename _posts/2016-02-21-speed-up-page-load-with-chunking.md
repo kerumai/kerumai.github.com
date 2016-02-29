@@ -3,7 +3,7 @@ layout:     post
 title:      Speeding up Page Load with Chunking
 date:       2016-02-21 18:29:00
 summary:    Some techniques for using HTTP Chunked Encoding & Link Prefetching to speed up page load times
-categories: engineering
+tags: engineering
 image:      cooper-sailor-2.png
 published:  true
 ---

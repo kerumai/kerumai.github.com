@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Programming Guidelines</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+  </head>
+  <body>
+
+    <table width="100%" summary="Header">
+      <tbody>
+        <tr>
+          <td align="left">
+            <h1>Programming Guidelines</h1>
+            <h4>A work-in-progress</h4>
+          </td>
+          <td align="right">Last Modified: 24 August 2004</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <ul>
+      <li>
+        <h3>Refactoring</h3>
+        <p>The purpose of refactoring is to improve the maintainability of a program,
+        without making any functional changes to it. So, the program should behave
+        exactly the same before the refactoring as after.</p>
+        <ul>
+          <li>
+            To improve the maintainability of the code, concentrate on:
+            <ul>
+              <li><strong>Removing duplication</strong>.</li>
+              <li>Improving readability.</li>
+              <li>Increasing consistency (of method/class/variable naming, for
+              example).</li>
+            </ul>
+          </li>
+          <li>Make one unit-of-change at a time. Test after each one (or a few - not more
+          than 1/2 hour). Then commit to CVS (so you have a useful history in case you
+          need to rollback), and add a useful commit-comment, even if it's just
+          "Refactoring".</li>
+          <li>Naming of methods and classes is very important, but at the same time, very
+          easy to change (using the IDE-refactoring-tools). Name a method what you think
+          it does (a verb). If you later change your mind, don't consider changing it,
+          <em>just change it</em>. Name classes what they represent (a noun). Don't worry
+          about the names being too long, and don't abbreviate them unless it's really
+          necessary or obvious what the abbreviation means.</li>
+          <li>Start by breaking up large methods into smaller ones that <em>only do one
+          thing</em> - then name them that thing.</li>
+          <li>Delete anything (variables,classes,methods) that isn't being used. If you
+          ever need it again, it'll be in CVS, so no problem. This stops you from having
+          to waste time updating old code that is not even used. It also makes the
+          program easier to understand.</li>
+          <li>When refactoring, don't think/worry about the <em>Design</em>. For example;
+          If you want to pull one method out of 2 classes into a new class (that does
+          nothing except this one method), then just do it. This new class will probably
+          flesh out in future refactorings anyhow (or you'll push it back into a more
+          suitable class).</li>
+        </ul>
+      </li>
+      <li>
+        <h3>OO</h3>
+        <ul>
+          <li>In general, the methods of a class should operate upon that class's own
+          members. If you find that you are passing a lot of parameters to the methods of
+          a class, then consider declaring these as member variables, and assigning them
+          in the constructor (or some kind of <code>initialise()</code> method).</li>
+          <li>
+            If you're often passing around lists or maps of objects, consider writing a
+            simple class to represent that list/map of objects. Create
+            <code>add<em>Object</em>()</code> or <code>put<em>Object</em>()</code>
+            methods that control the type of objects added to the collection. This gives
+            you some nice type-safety, and also often turns into a good place to put
+            convenience/helper methods that act on the objects in the collection.
+            <p>See <a
+            href="http://martinfowler.com/bliki/EncapsulatedCollection.html">EncapsulatedCollection</a> (<a href="http://martinfowler.com/">Martin Fowler knows what he's talking about!</a>).</p>
+          </li>
+        </ul>
+      </li>      
+      <li>
+        <h3>Web/Servlets</h3>
+        <ul>
+          <li>
+            <h4>HTTP Caching</h4>
+            <ul>
+              <li>
+                <p>Implement/override the <a
+                href="/docs/servlet-2.4/javax/servlet/http/HttpServlet.html#getLastModified(javax.servlet.http.HttpServletRequest)">
+                <code>getLastModified()</code></a> method in servlets whenever possible.
+                This is particularly simple for pages whose last-modified date is
+                dependent on just one (or a few) files, because you can just return the
+                date of the file.</p>
+                <p>The advantage of doing this is that the browser will use it's cached
+                page if it hasn't been modified since it was cached.</p>
+                <ul>
+                  <li><a
+                  href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.29">Last-Modified
+                  Response Header - Servlet Container uses <code>getLastModified()</code>
+                  to set this</a></li>
+                  <li><a
+                  href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.25">If-Modified-Since
+                  Request Header - Used by the browser</a></li>
+                </ul>
+              </li>
+              <li>
+                <p>Set the HTTP <a
+                href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.21">Expires</a>
+                or <a
+                href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9">Cache-Control,
+                max-age</a> header. For static files or pages which don't change, for
+                example, css and images.</p>
+                <p>This is easy to do on the website. You just have to configure Apache
+                to serve your static files, and then you can set an Expires value for
+                those files. It's generally best not to set it to more than 24 hours.</p>
+                <p>By setting the Expires/max-age headers, you are telling the browser
+                that it can cache and re-use the page for that length of time, without
+                making any further requests to the server. This can noticeably improve
+                the speed of page-loading.</p>
+                <ul>
+                  <li><a
+                  href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9.3">
+                  Difference between Expires and max-age</a></li>
+                  <li><a
+                  href="http://www.mozilla.org/projects/netlib/http/http-caching-faq.html">
+                  How Mozilla handles HTTP Caching</a></li>
+                </ul>
+              </li>
+              <li><a
+              href="http://www.amazon.co.uk/exec/obidos/ASIN/1565925092/qid=1054746584/sr=2-1/ref=sr_2_3_1/202-7031196-8170264">
+              This book explains HTTP pretty well.</a></li>
+              <li>
+                <p>To help understand/find what http-headers are being sent back and
+                forth between browser and server, try installing this <a
+                href="http://livehttpheaders.mozdev.org/">plugin for mozilla</a>.
+                Alternatively, use <code>curl --include &lt;URL&gt;</code> or <code>curl
+                --head &lt;URL&gt;</code> from linux command-line.</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h4>Statelessness is Your Friend :)</h4>
+            <p>Don't hold state in the Session object. Only use this as a method of
+            holding/caching objects to improve performance. An effective way of
+            approaching this is to write all your view-code with the assumption that the
+            user has requested this page by opening a new browser, and typing in the
+            URL.</p>
+            <p>An implication of this, is that state (or more likely -
+            pointers/referemces/keys to state) should be embedded in the URL's/links you
+            generate. You can do this using parameters, <a
+            href="http://images.google.com/images?q=pug">http://images.google.com/images?q=pug</a>,
+            or by building it into the path-hierarchy of the URL, <a
+            href="http://del.icio.us/mjsmithlondon/rest">http://del.icio.us/mjsmithlondon/rest</a></p>
+            <ul>
+              <li>
+                <p>Authentication/Login is a pragmatic exception to this. You shouldn't
+                put passwords or maybe even usernames in the URL for security reasons.
+                The alternative of using HTTP-Authentication works, but the UI that
+                web-browsers use for it is crap.</p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h4>HTTP &amp; HTML General</h4>
+            <ul>
+              <li><a href="http://www.w3.org/TR/chips/">W3C - Common HTTP Implementation
+              Problems</a></li>
+              <li><a href="http://www.w3.org/TR/webarch/">W3C - Architecture of the World
+              Wide Web</a></li>
+              <li><a href="http://www.useit.com/alertbox/990530.html">Jakob Nielsen - The
+              Top Ten New Mistakes of Web Design</a></li>
+              <li><a href="http://www.w3.org/QA/Tips/">W3C - Quality Tips for
+              Webmasters</a></li>
+              <li><a href="http://www.w3.org/TR/WCAG20-HTML-TECHS/">W3C - HTML Techniques
+              for Content Accessibility</a></li>
+            </ul>
+          </li>
+          <li>
+            <h4>General</h4>
+            <ul>
+              <li>If you model your webapp as a website (ie. a graph of linked documents)
+              rather than a client-server application, the rest of the web infrastructure
+              (browsers, proxies) is more likely to work with you, rather than against
+              you.</li>
+              <li>
+                <p>A general rule for when to use GET vs POST - Use POST when the request
+                will modify/add/delete something, otherwise use GET.</p>
+                <p>Remember that a HTML FORM can be used for GET as well as POST.</p>
+              </li>
+              <li>When responding to a POST; if the page you are going to return is also
+              accessible via GET, then return a <strong>Redirect</strong> pointing to the
+              URL of the page. I generally always return a redirect, except for things
+              which have no real value within the system (eg. confirmation messages,
+              errors, etc..)</li>
+              <li>
+                Try to use the standard html tags consistently in your webapp. Most users
+                will have used a web browser before when navigating around websites. So
+                try to use recognizable links for navigation (rather than some other tag
+                with javascript attached to the onClick() event).
+                <p>See this article for info on <a
+                href="http://www.evolt.org/article/Links_and_JavaScript_Living_Together_in_Harmony/17/20938/">
+                opening new windows using js, while still having a link with the real
+                href.</a></p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h4>Character Encoding</h4>
+            <ul>
+              <li>
+                Probably the safest strategy is to encode everyting as UTF-8.
+                <ul>
+                  <li>
+                    Set the response content-type to UTF-8 every time you send a
+                    response, eg.
+<pre>
+<code>HttpServletResponse.setContentType("text/html; charset=UTF-8")</code>
+</pre>
+                  </li>
+                  <li>
+                    If serving static html pages (ie. you can't set the response
+                    content-type), then add the equivalent meta tag to the html, eg.
+<pre>
+&lt;META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8"&gt;
+</pre>
+                    <em>NB. This is one of the few times I would recommend using the META
+                    HTTP-EQUIV tag.</em>
+                  </li>
+                  <li>
+                    Set the character-encoding of the request to UTF-8. You can only be
+                    confident that it is this, because all the pages you sent out were
+                    UTF-8.
+<pre>
+<code>HttpServletRequest.setCharacterEncoding("UTF-8")</code>
+</pre>
+                    This tells the servlet-container (tomcat) to assume that all
+                    parameters and headers in the request are encoded as UTF-8. Without
+                    telling the container this, it will/should check if any
+                    character-encoding was set by the browser (none of the browsers seem
+                    to bother) and if not, then assume ISO-8859-1 (Latin1).
+                    <p><strong>Beware: Tomcat has a bug/feature that
+                    setCharacterEncoding() must be called before any client code accesses
+                    the request-parameters/headers. (ie once an access has been made to a
+                    parameter, tomcat parses all of the parameters using the current
+                    character-encoding, and caches them. Therefore, setting the encoding
+                    after this will have no effect.). Therefore, recommend setting this
+                    at the beginning of your Gateway-type class's service()
+                    method.</strong></p>
+                  </li>
+                </ul>
+              </li>
+              <li><a
+              href="http://www.w3.org/International/questions/qa-setting-encoding-in-applications.html">
+              FAQ: Setting encoding in web authoring applications</a></li>
+              <li><a href="http://www.i18nfaq.com/index.html">FAQ on Software
+              Internationalization (I18N)</a></li>
+            </ul>
+          </li>
+          <li>
+            <h4>HTML Character Escaping</h4>
+            TODO
+            <ul>
+              <li><a href="http://www.alistapart.com/articles/emen/">Useful info on html
+              hyphens and unicode</a></li>
+            </ul>
+          </li>
+          <li>
+            <h4>HTML</h4>
+            <ul>
+              <li>Try to use the <em>correct</em> markup (tags) as much as possible <a
+              href="http://www.sizefactory.com/xhtml/xhtmlbasics.html">Standards-Compliant
+              XHTML</a></li>
+            </ul>
+          </li>
+          <li>
+            <h4>XHTML - Look out for ...</h4>
+            <ul>
+              <li>
+                <p>Even though it is valid XML to close tags like
+                <code>&lt;div/&gt;</code>, it messes up most browsers, so you must put a
+                space before the end of the tag - <code>&lt;div /&gt;</code>.</p>
+                <p>I have encountered problems using even this method sometimes (I think
+                css related).</p>
+              </li>
+              <li>
+                <p>Beware when including styles or scripts in the <code>HEAD</code>
+                element. Because there could be illegal characters in them (eg. &lt;,
+                &gt;, &amp;). According to the <a
+                href="http://www.w3.org/TR/xhtml1/#h-4.8">spec</a> , you need to wrap
+                them in <code>CDATA</code> tags.</p>
+                <p>But in reality, you also need to comment out the CDATA tags using
+                <code>//</code> for styles, and <code>/* */</code> for scripts. More
+                detailed discussions; <a
+                href="http://www.mit.edu/~ddcc/xhtmlref/text.html">here</a> and <a
+                href="http://lists.evolt.org/archive/Week-of-Mon-20030901/147888.html">here</a>.</p>
+                <p><em>You can avoid these issues by always having your scripts and
+                styles in external files.</em></p>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h4>Browser Bugs to watch out for</h4>
+            <dl>
+              <dt>IE6 does not send the value of a &lt;BUTTON type="submit"
+              value="***"/&gt; when it submits the form. Instead, it sends the text from
+              withing the BUTTON.</dt>
+              <dd>
+                <p>This is wrong according to the HTML spec, and also strangely enough,
+                it worked correctly in IE5 !</p>
+                <cite>Some References; <a
+                href="http://groups.google.com/groups?hl=en&amp;lr=&amp;ie=UTF-8&amp;safe=off&amp;th=5624e205a233e71b&amp;seekm=Pine.LNX.4.53.0307231653050.18393%40lxplus077.cern.ch&amp;frame=off">
+                A Usenet discussion of this</a> , <a
+                href="http://ppewww.ph.gla.ac.uk/~flavell/www/trysub.html">Explanation of
+                INPUT and BUTTON behaviour</a></cite>
+                <p>This is mainly a problem when you want to have one form with multiple
+                submit buttons. This bug means that you can't use the same name for each
+                submit button, then decide what action to take server-side based on the
+                value.</p>
+                <p><strong>Solution:</strong> Give each submit button a different name,
+                but prefixed by the name you really wanted to use. Then base you
+                server-side action purely on whether a particular button's name is in the
+                parameter list.</p>
+                <p><em>NB. IE6 also seems to submit the name/text pairs of
+                <strong>all</strong> the submit buttons, rather than just the one that
+                was clicked. Therefore recommend not using BUTTON at all. (Note that the
+                main reason for using BUTTON was that you can set the display-text to be
+                different to the value.)</em></p>
+              </dd>
+              <dt>Internet Explorer(6) displays nothing (blank white page)</dt>
+              <dd>Can be caused by having a <code>script</code> tag in the
+              <code>head</code> without a closing tag !</dd>
+              <dt>The contents of an <code>iframe</code> are not displayed in IE6</dt>
+              <dd>Try removing any DTD from the containing page.</dd>
+            </dl>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+  </body>
+</html>
