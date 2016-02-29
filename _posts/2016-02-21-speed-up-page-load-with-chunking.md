@@ -23,7 +23,7 @@ There's a couple of related techniques that you can use with chunked encoding to
 3 is for more specific use-cases, and I haven't really seen it used very often, but it gave a lot of benefits for me on a big js-driven _SPA_ I worked on a few years ago.
 
 
-## Fast Flushing (1 & 2)
+## Fast Flushing
 
 So this can give 2 main improvements:
 
@@ -72,7 +72,7 @@ And here are some other people's writings about this technique:
 - <http://www.websiteoptimization.com/speed/tweak/flush/>
 
 
-## Late Flushing JSON Data (3)
+## Late Flushing JSON Data
 
 A scenario where this is useful is when you have a _Single Page Application_ where the following sequential round trips have to occur before the page/app is ready:
 
