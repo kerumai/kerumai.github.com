@@ -2,9 +2,10 @@
 layout:     post
 title:      Programming Guidelines From 2004
 date:       2016-02-28 14:30:00
-tags: engineering,firsttechjob
-image: cooper-santa.jpg
-published: true
+summary:    Looking back on some software development tips that I wrote at the start of my career
+tags:       engineering,firsttechjob
+image:      cooper-santa.jpg
+published:  true
 ---
 
 The recent [\#FirstTechJob](https://twitter.com/search?q=%23FirstTechJob) meme on twitter got me thinking about my early career at a couple of small software companies. And that led me to finding this old gem that I wrote for my colleagues back in 2003/4 to seemingly try to impart my superior programming wisdom on them. 
