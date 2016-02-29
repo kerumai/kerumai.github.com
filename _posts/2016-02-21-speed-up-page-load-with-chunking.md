@@ -48,18 +48,17 @@ Now taking a look at the webpagetest runs for each, you can see the impact. Note
 
 You can see that all the page assets don't start to get downloaded until __after the whole page has been generated__ by server and received by the browser.
 The _Document Complete_ time was __1.943 secs__:
-![Waterfall for no flushing](/assets/waterfall-no-flushing.png)
-<http://www.webpagetest.org/result/160229_WY_AGR/1/details/>
+[![Waterfall for no flushing](/assets/waterfall-no-flushing.png)](http://www.webpagetest.org/result/160229_WY_AGR/1/details/)
 
 
 #### Results with Fast Flushing
 
 And now with the early flushing, we can see that most of the assets have finished downloading in the gap between the first head chunk and the rest of the body.
 The _Document Complete_ time was __1.165 secs__:
-![Waterfall for fast flushed](/assets/waterfall-fast-flushed.png)
-<http://www.webpagetest.org/result/160229_99_AGQ/1/details/>
+[![Waterfall for fast flushed](/assets/waterfall-fast-flushed.png)](http://www.webpagetest.org/result/160229_99_AGQ/1/details/)
 
 So for this example - although admittedly tailored to demonstrate this - thats a decent __60% improvement__.
+
 
 #### References
 
