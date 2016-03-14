@@ -31,7 +31,7 @@ All the other teams focused on making their trucks as strong and stable as possi
 _Our team just jerry-rigged brakes for the wheels, and won the prize._
 
 
-## Requirements are rarely all set in stone
+## Requirements are Rarely All Set in Stone
 
 Once you've spent some time analyzing solutions for a problem, you'll often have insights that the originator of the requirements did not. So if you think that removal or weakening of a requirement will reduce the cost or risk, than have confidence and try it.
 
@@ -40,7 +40,7 @@ eg. One requirement is 10% of the value, but is the highest risk due to it being
 When looking at solutions to a problem, try to step back and see the choice in terms of the ___best combination of value, cost and risk___. Engineers should take some responsibility for the balancing of these 3 - it shouldn't be only left up to management.
 
 
-## Sometimes the most effective way to solve a problem is to redefine the problem itself
+## Sometimes the Most Effective Way to Solve a Problem is to Redefine the Problem Itself
 
 Or as President Underwood would say, _"If you don’t like how the table is set, turn over the table"_. 
 
