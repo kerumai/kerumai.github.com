@@ -42,7 +42,7 @@ When looking at solutions to a problem, try to step back and see the choice in t
 
 ## Sometimes the Most Effective Way to Solve a Problem is to Redefine the Problem Itself
 
-Or as President Underwood would say, _"If you don’t like how the table is set, turn over the table"_. 
+Or as President Underwood would say, ___"If you don’t like how the table is set, turn over the table"___. 
 
 ![](/assets/fu2016.jpg){:height="250px"}
 
