@@ -8,7 +8,9 @@ image:      egg-of-columbus.jpg
 published:  true
 ---
 
-When you're weighing solutions to a problem, remember to also consider the effect of removing or relaxing requirements and constraints.
+In quite a few projects I've been involved in over the years, I think my most valuable contribution was not the code I wrote, but my redefining of the problem.
+
+When you're weighing up solutions, remember to also consider the possibilities of removing or relaxing requirements and constraints. It can sometimes make the difference between a successful project, or a cancelled one.
 
 
 ## Beware of Implied Constraints
