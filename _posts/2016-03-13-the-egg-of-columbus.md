@@ -6,6 +6,7 @@ summary:    Sometimes the most effective way to solve a problem is to redefine t
 tags:       engineering, effectiveness
 image:      egg-of-columbus.jpg
 published:  true
+crosspost_to_medium: true
 ---
 
 In quite a few projects I've been involved in over the years, I think my most valuable contribution was not the code I wrote, but my redefining of the problem.
@@ -30,7 +31,7 @@ The first time I remember using this, was when in my early teens, I was in a sch
 
 All the other teams focused on making their trucks as strong and stable as possible, so that it would survive the collision.
 
-_Our team just jerry-rigged brakes for the wheels, and won the prize._
+__Our team just jerry-rigged brakes for the wheels, and won the prize.__
 
 
 ## Requirements are Rarely All Set in Stone
@@ -59,7 +60,7 @@ Unfortunately this one big problem that was causing serious business pain on a w
 
 This would require rewriting almost everything, and take an indeterminate amount of time.
 
-That was a _bad_ problem definition (in my experience this is a fairly common smell - a problem defined in terms of an implementation goal).
+That was a __bad__ problem definition (in my experience this is a fairly common smell - a problem defined in terms of an implementation goal).
 
 After living with this for a while, I finally got frustrated enough to propose an alternative. This involved redefining the problem to something that was simpler and more effective to solve. Which in this case was:
 

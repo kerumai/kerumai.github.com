@@ -1,3 +1,4 @@
+
 drafts_dir = '_drafts'
 posts_dir  = '_posts'
 
