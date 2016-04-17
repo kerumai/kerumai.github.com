@@ -3,6 +3,7 @@ layout:     post
 title:      Choose What You Spend Your Time On
 date:       2016-04-16
 summary:    You'll never have enough time to work on all the great ideas or valuable improvements that you think of - so the important part is deciding what - today - you should be spending your time on
+image:      cooper-sleeping.jpg
 tags:       engineering, effectiveness
 published:  true
 crosspost_to_medium: true
@@ -10,7 +11,7 @@ crosspost_to_medium: true
 
 I've been a software engineer for 16 years, and I'm just '_ok_' at programming. I don't code particularly quickly, I don't have the most advanced knowledge, and no-one ever looks at my code and says _Wow_! 
 
-But one thing that makes up for these deficiencies is that __I'm good at choosing what to spend my time on__.
+But one thing that makes up for these deficiencies is that I'm good at __choosing what to spend my time on__.
 
 ## What I Do
 
