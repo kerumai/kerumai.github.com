@@ -13,9 +13,11 @@
     <link rel="preconnect" href="http://www.google-analytics.com">
     <link rel="preconnect" href="https://ssl.google-analytics.com">
 
+    <!--
     <link rel="preconnect" href="http://kerumai.disqus.com">
     <link rel="preconnect" href="http://disqus.com">
     <link rel="preconnect" href="http://a.disquscdn.com">
+    -->
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ "/resources/css/pixyll.css" | prepend: site.baseurl }}?{{ site.time | date: "%Y%m%d%H%M" }}" type="text/css">
@@ -23,8 +25,23 @@
     <!-- Fonts -->
     <!--<link href='/resources/css/fonts.googleapis.com_css_family_Merriweather_900_900italic_300_300italic.css' rel='stylesheet' type='text/css'>
     <link href='/resources/css/fonts.googleapis.com_css_family_Lato_900_300.css' rel='stylesheet' type='text/css'>-->
+
     {% if site.show_social_icons or site.show_sharing_icons %}
-      <link href="/resources/css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Try to preload the css for the Sharing logos now, but don't actually add the stylesheet until later. -->
+    <script>
+        function fontPreloadFinished(e) {
+            if (! window.fontAwesomeStyleAdded) {
+                var res = document.createElement("link");
+                res.rel = "stylesheet";
+                res.href = "/resources/css/font-awesome-4.5.0/css/font-awesome.min.css";
+                document.head.appendChild(res);    
+                window.fontAwesomeStyleAdded = true; 
+            }           
+        }
+        // In case this browser doesn't support link preload, attempt to add the stylesheet onload too.
+        document.onload = fontPreloadFinished;
+    </script>
+    <link rel="preload" as="style" onload="fontPreloadFinished()" href="/resources/css/font-awesome-4.5.0/css/font-awesome.min.css">
     {% endif %}
 
     <!-- Verifications -->
