@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Choose What You Spend Your Time On
-date:       2016-04-16
+date:       2016-04-18
 summary:    You'll never have enough time to work on all the great ideas or valuable improvements that you think of - so the important part is deciding what - today - you should be spending your time on
 image:      cooper-sleeping.jpg
 tags:       engineering, effectiveness
