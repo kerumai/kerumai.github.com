@@ -11,15 +11,17 @@ crosspost_to_medium: true
 
 I've been a software engineer for 16 years, and I see myself as just '_ok_' at programming. No-one ever looks at my code and says _Wow_!
 
-But one thing that makes up for my deficiencies is that I'm really good at __choosing what to spend my time on__.
+But one thing that makes up for my deficiencies is that I'm good at __choosing what to spend my time on__.
 
 
 
 ## What I Do
 
-Engineers will never have enough time to work on all the great ideas or improvements that they think of, so a really important factor in being __effective__, is deciding what - __today__ - we should be spending our time on.
+Engineers will never have enough time to work on all the great ideas or improvements that they think of, so a really important factor in being __effective__, is deciding what - __today__ - we should spend our time on.
 
-- Choose which tasks/ideas have the best combination of value, cost & risk that I can work on today, this week, this month?
+So try to:
+
+- Choose which tasks/ideas have the __best combination of value, cost & risk__ that you can work on today, this week, this month?
 - After starting on an idea, do the minimum possible to get a feel for if it's going to be viable.
 - Re-assess often, avoid getting caught up in the sunk cost fallacy, and drop ideas without remorse when needed.
 
@@ -35,32 +37,23 @@ The answer to the question should __not__ automatically be - _"whatever I was wo
 
 If you made a decision yesterday based on the information you had then, but today you've gained further information, then you should re-assess.
 
+
 ## Gain Feedback Early, so you can Re-Assess Early
+
+> "When the facts change, I change my mind. What do you do, sir?" <small> -- <cite>John Maynard Keynes</cite></small>
 
 Try out ideas, but assess early, and give up on them if they don't look like they're going to be the most valuable thing you can work on this week. 
 
 I'll often try and get more insight quickly by hacking something very ugly together that's just enough to give me some real feedback - whether that's some profiling data for a performance improvement, or just to confirm that a new feature would actually work in practice.
 
-I'll often just shelve little mini-projects after spending a few hours on them. I've gained enough feedback that I don't see them being as valuable as other tasks I could work on. So I stop working on them. It's a __sunk cost, so move on__.
+And I'll frequently just shelve little mini-projects after spending a few hours on them. If I've gained enough feedback and don't see them being as valuable as other tasks I could work on, then I stop working on them. It's a __sunk cost, so move on__.
 
 The goal is to get some real feedback. __Data, not assumptions__.
 
 
-#### Optimize for getting fast feedback
-
-For my job, this means having easy paths for:
-
-- Getting _experiments_ deployed into load-test environments, and/or production quickly.
-- Getting comfortable at navigating code not only owned by my team, and being able to quickly try out changes to that 3rd party code.
-- Capturing the results of an experiment.
-  - Metrics, metrics, metrics.
-  - Profiling - both in test and production environments.
-  - Sometimes just running a test on my laptop.
-
-
 ## Judge the Value of Each of the Competitors for Your Time
 
-Consider the value, cost and risk of each of your options. You cannot properly compare options, based only on considering the value or cost or risk of them. You need to consider all of these to get a full picture, and therefore make a good choice.
+Consider the value, cost and risk of each of your options. You can't properly compare options, based only on considering the value __or__ cost __or__ risk of them. You need to consider __all__ of these to get a full picture, and therefore make a good choice.
 
 From the pov of my work, I see these as:
 
@@ -73,7 +66,7 @@ I don't always go to the extent of formally assessing these, but I find that jus
 
 ## Applicability
 
-I find this approach particularly important if you're part of a _[you-build-it-you-run-it](https://queue.acm.org/detail.cfm?id=1142065)_ style of team. I'm a huge fan of this way of organising, but it does require engineers to bounce around quite a bit. So being thoughtful about priorities on a frequent basis, really helps with getting a good balance between reactive and proactive tasks. 
+I find this approach particularly important if you're part of a _[you build it, you run it](https://queue.acm.org/detail.cfm?id=1142065)_ style of team. I'm a huge fan of this way of organising, but it does require engineers to bounce around quite a bit. So being thoughtful about priorities on a frequent basis, really helps with getting a good balance between reactive and proactive tasks. 
 
 And an important enabler for this approach, is that the organisation you work for gives you the space and freedom to make your own decisions.
 I'm lucky working at Netflix to be in this situation, and my managers here - [@moldfarm](https://twitter.com/moldfarm), [@schmaus](https://twitter.com/schmaus), [@daniel_jacobson](https://twitter.com/daniel_jacobson) - work hard to foster this kind of environment. __"Freedom & Responsibility"__ really is applied all the way through the company.
