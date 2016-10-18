@@ -10,17 +10,20 @@ not_listed: true
 crosspost_to_medium: true
 ---
 
-My father is an *engineer*, but worked in a very different industry to mine. He spent most of his career as an Engineering Manager at what was then named British Steel Corporation in Teeside. But regardless of the differences, I also a lot of parallels and experiences to learn from.
+My father is an engineer and spent most of his career as an Engineering Manager at what was then the British Steel Corporation in Teeside. 
+
+The problems he had to solve on the Steelworks are about as different from my day-to-day, of ensuring people can watch TV shows, as possible. But _how we go about solving those problems_ has a lot of parallels.
+
 
 > "He who strains after the gnat of perfection will swallow the camel of unreadiness!" 
 <small> -- <cite>[Lord Fisher of Kilverstone](https://en.wikipedia.org/wiki/John_Fisher,_1st_Baron_Fisher) (First Sea Lord of the Royal Navy 1904-10)</cite></small>
 
 
-The above quote was always hung on the wall of my fathers office, and had come from one of his previous superiors whom he greatly respected. He told me that it formed the basis of his whole career in engineering and management. It - and other 'war stories' - that he told me as a youngster, turned out to make a big impression on me too.
+The above quote was always hung on the wall of my fathers office, and had come from one of his previous superiors who he greatly respected. He told me that it formed the basis of his whole career in engineering and management. It - and other 'war stories' - that he told me as a youngster, turned out to make a big impression on me too.
 
 Some things - like Total Quality Management (a variation of Toyota's lean manufacturing practices) - gave me an early feel for _agile methodologies_ before they became widespread in the software industry. While others were almost _allegories_ that stuck in my head and sometimes subconciously, other times consciously have guided how I approach problems in my own career.
 
-Here, I'll paraphrase one of those stories, and some of the values I took from it.
+Here, I'll paraphrase one of those stories, along with some of the lessons I drew from it.
 
 
 ## Solving Problems Under Pressure
@@ -39,11 +42,14 @@ At this point my Dad got involved:
 
 
 
-### What I took away from this
+### What I Took Away From This
 
 * Trust your own judgement. And demonstrate this to others by taking responsibility for the outcome.
 * Fast turnaround often outweighs perfection.
-* Do the simplest thing that could possibly work.
+* Start with the simplest thing that could possibly work, and find out if that's good enough.
+
+
+A lot of the challenges we encounter in engineering are timeless, so even though the technologies we use change as the years go by, the underlying tactics for approaching problems don't seem to.
 
 
 
