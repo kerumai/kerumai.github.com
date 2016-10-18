@@ -10,7 +10,7 @@ not_listed: true
 crosspost_to_medium: true
 ---
 
-(blast-furnace-1.jpg)
+[Redcar Blast Furnace](/assets/blast-furnace-1.jpg)
 
 My father is an engineer and spent most of his career as an Engineering Manager at what was then the British Steel Corporation in Teeside. 
 
