@@ -3,12 +3,14 @@ layout:     post
 title:      The Gnat of Perfection
 date:       2016-10-16
 summary:    Quick and simple solutions often beat striving for perfection
-image:      
+image:      blast-furnace-1.jpg
 tags:       engineering
 published:  true
 not_listed: true
 crosspost_to_medium: true
 ---
+
+(blast-furnace-1.jpg)
 
 My father is an engineer and spent most of his career as an Engineering Manager at what was then the British Steel Corporation in Teeside. 
 
