@@ -11,6 +11,7 @@ crosspost_to_medium: true
 ---
 
 ![Redcar Blast Furnace](/assets/blast-furnace-1.jpg)
+<small> -- <cite>[Redcar Blast Furnace](http://www.bbc.co.uk/tees/content/image_galleries/corus_steelworks_gallery.shtml)</cite></small>
 
 My father is an engineer and spent most of his career as an Engineering Manager at what was then the British Steel Corporation in Teeside. 
 
