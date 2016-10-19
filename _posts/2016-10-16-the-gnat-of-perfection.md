@@ -1,8 +1,8 @@
 ---
 layout:     post
 title:      The Gnat of Perfection
-date:       2016-10-16
-summary:    Quick and simple solutions often beat striving for perfection
+date:       2016-10-19
+summary:    Lessons from my father
 image:      blast-furnace-1.jpg
 tags:       engineering
 published:  true
