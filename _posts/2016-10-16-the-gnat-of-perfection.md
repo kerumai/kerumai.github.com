@@ -65,7 +65,7 @@ A lot of the challenges we encounter in engineering are timeless, so even though
 
 And I'll leave you with another great quote - this time one of my Dad's own:
 
-> "For success you need someone to make a decision, and someone to back him."
+> "For success you need someone to make a decision, and someone to back them."
 <small> -- <cite>John George Smith</cite></small>
 
 
