@@ -10,7 +10,7 @@ not_listed: false
 crosspost_to_medium: true
 ---
 
-My father, John, is an engineer and spent most of his career as an Engineering Manager at what was then the British Steel Corporation in Teeside. 
+My father, John, is an engineer and spent most of his career as an Engineering Manager at what was then the British Steel Corporation in Teesside. 
 
 ![Redcar Blast Furnace](/assets/blast-furnace-1.jpg)
 
@@ -34,7 +34,7 @@ Here, I'll paraphrase one of those stories, along with some of the lessons I dre
 
 For part of his career, my Dad was responsible for transport at the Steel Works (trains and trucks carrying large cargoes of iron and steel around the site). 
 
-In this incident, some consultants had been brought in to design and lay a new road for transporting the huge 100 tonne fully-laden, steel slab carriers between plants. And just a week after the new road was put to use, it had already started to _fluidise_ (ie. the vast weight of the loaded trucks was causing the foundations of the road to move).
+In this incident, some consultants had been brought in to design and lay a new road for transporting the huge 100 tonne payload, steel slab carriers between plants. And just a week after the new road was put to use, it had already started to _fluidise_ (ie. the vast weight of the loaded trucks was causing the foundations of the road to move).
 
 ![A Slab Carrier](/assets/slab-carrier.jpg)
 
