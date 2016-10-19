@@ -10,12 +10,13 @@ not_listed: true
 crosspost_to_medium: true
 ---
 
+My father, John, is an engineer and spent most of his career as an Engineering Manager at what was then the British Steel Corporation in Teeside. 
+
 ![Redcar Blast Furnace](/assets/blast-furnace-1.jpg)
-<small> -- <cite>[Redcar Blast Furnace](http://www.bbc.co.uk/tees/content/image_galleries/corus_steelworks_gallery.shtml)</cite></small>
 
-My father is an engineer and spent most of his career as an Engineering Manager at what was then the British Steel Corporation in Teeside. 
+<small> -- <cite>Redcar Blast Furnace. Photograph. [BBC Tees](http://www.bbc.co.uk/tees/content/image_galleries/corus_steelworks_gallery.shtml)</cite></small>
 
-The problems he had to solve on the Steelworks are about as different from my day-to-day, of ensuring people can watch TV shows, as possible. But _how we go about solving those problems_ has a lot of parallels.
+The problems he had to solve on the Steelworks are about as different from my day-to-day, of ensuring people can watch their favourite TV shows, as possible. But _how we go about_ solving those problems has a lot of parallels.
 
 
 > "He who strains after the gnat of perfection will swallow the camel of unreadiness!" 
@@ -31,7 +32,13 @@ Here, I'll paraphrase one of those stories, along with some of the lessons I dre
 
 ## Solving Problems Under Pressure
 
- For part of his career, my Dad was responsible for transport at the Steel Works (trains and trucks carrying large cargoes of iron and steel around the site). In this incident, some consultants had been brought in to design and lay a new road for transporting steel slabs between 2 plants. And just a week after the new road was put to use, it had already started to _fluidise_ (ie. the vast weight of the loaded trucks was causing the foundations of the road to move).
+For part of his career, my Dad was responsible for transport at the Steel Works (trains and trucks carrying large cargoes of iron and steel around the site). 
+
+In this incident, some consultants had been brought in to design and lay a new road for transporting the huge 100 tonne fully-laden, steel slab carriers between plants. And just a week after the new road was put to use, it had already started to _fluidise_ (ie. the vast weight of the loaded trucks was causing the foundations of the road to move).
+
+![A Slab Carrier](/assets/slab-carrier.jpg)
+
+<small> -- <cite>Kress Slab Carrier. Photograph. [Kress Corp](http://www.kresscarrier.com/CarriersSlab.html)</cite></small>
 
 The Senior Engineers and others were speculating about what to do - closing the road for repairs would cost millions, and no-one was certain what to do to fix it. Spending weeks more to research the most efficient solution would have been the _no-one-gets-fired-for-buying-ibm answer_, but would have been extremely costly. And no-one wanted to take responsibility for making a decision that might loook badly on them if it failed.
 
@@ -62,3 +69,10 @@ And I'll leave you with another great quote - this time one of my Dad's own:
 <small> -- <cite>John George Smith</cite></small>
 
 
+### And Just One More Thing
+
+If you ever get the change to walk around inside a SteelWorks, then jump at it. They're one of the most awe-inspiring places. Like being next to a man-made volcano.
+
+![BOS Cathedral](/assets/bos-cathedral.jpg)
+
+<small> -- <cite>BOS Cathedral. Photograph. [Demps](http://s30.photobucket.com/user/-Demps-/library/TCP?sort=3&page=1)</cite></small>
