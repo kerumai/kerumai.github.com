@@ -6,7 +6,7 @@ summary:    Quick and simple solutions often beat striving for perfection
 image:      blast-furnace-1.jpg
 tags:       engineering
 published:  true
-not_listed: true
+not_listed: false
 crosspost_to_medium: true
 ---
 
