@@ -6,6 +6,7 @@ summary:    Lessons from my father
 image:      blast-furnace-1.jpg
 tags:       engineering
 published:  true
+not_listed: false
 crosspost_to_medium: true
 ---
 
