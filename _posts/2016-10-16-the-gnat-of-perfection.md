@@ -44,11 +44,11 @@ The Senior Engineers and others were speculating about what to do - closing the 
 
 At this point my Dad got involved:
 
-1. He used his *practical knowledge* to propose how he would build a road like this that needs to support massive forces. Basically - deeper foundations with the biggest stone available in the bottom reducing in layers upwards.
-2. Arranged a *quick prototype* to the people who held the purse strings, in the form of a demonstration trench.
+1. He used his **practical knowledge** to propose how he would build a road like this that needs to support massive forces. Basically - deeper foundations with the biggest stone available in the bottom reducing in layers upwards.
+2. Arranged a **quick prototype** to the people who held the purse strings, in the form of a demonstration trench.
     - Starting at the foundation depth of the original road, then increasing to over double that, and testing by running the vehicles over it repeatedly. At 1 meter it fluidised, at 1.5 meters it was stable and at 2 meters it was solid.
-3. Time costs far more than materials in this situation, so keep it simple, but *don't try to make it perfectly efficient* - use large rocks, and deeper foundations than might actually be required.
-4. He stood up and *took responsibility* for the plan he was suggesting. In front of superiors and peers, he transparently explained what and why he would do this, took responsibility on his own shoulders, and gained the authority to proceed in just 3 days against a background of huge ongoing losses.
+3. Time costs far more than materials in this situation, so keep it simple, but **don't try to make it perfectly efficient** - use large rocks, and deeper foundations than might actually be required.
+4. He stood up and **took responsibility** for the plan he was suggesting. In front of superiors and peers, he transparently explained what and why he would do this, took responsibility on his own shoulders, and gained the authority to proceed in just 3 days against a background of huge ongoing losses.
 
 
 
