@@ -25,7 +25,7 @@ The problems he had to solve on the Steelworks are about as different from my da
 
 The above quote was always hung on the wall of my fathers office, and had come from one of his previous superiors who he greatly respected. He told me that it formed the basis of his whole career in engineering and management. It - and other 'war stories' - that he told me as a youngster, turned out to make a big impression on me too.
 
-Some things - like Total Quality Management (a variation of Toyota's lean manufacturing practices) - gave me an early feel for _agile methodologies_ before they became widespread in the software industry. While others were almost _allegories_ that stuck in my head and sometimes subconciously, other times consciously have guided how I approach problems in my own career.
+Some things - like Total Quality Management (a variation of Toyota's lean manufacturing practices) - gave me an early feel for _agile methodologies_ before they became widespread in the software industry. While others were almost _allegories_ that stuck in my head and sometimes subconsciously, other times consciously have guided how I approach problems in my own career.
 
 Here, I'll paraphrase one of those stories, along with some of the lessons I drew from it.
 
@@ -40,15 +40,15 @@ In this incident, some consultants had been brought in to design and lay a new r
 
 <small> -- <cite>Kress Slab Carrier. Photograph. [Kress Corp](http://www.kresscarrier.com/CarriersSlab.html)</cite></small>
 
-The Senior Engineers and others were speculating about what to do - closing the road for repairs would cost millions, and no-one was certain what to do to fix it. Spending weeks more to research the most efficient solution would have been the _no-one-gets-fired-for-buying-ibm answer_, but would have been extremely costly. And no-one wanted to take responsibility for making a decision that might loook badly on them if it failed.
+The Senior Engineers and others were speculating about what to do - closing the road for repairs would cost millions, and no-one was certain what to do to fix it. Spending weeks more to research the most efficient solution would have been the _no-one-gets-fired-for-buying-ibm answer_, but would have been extremely costly. And no-one wanted to take responsibility for making a decision that might look badly on them if it failed.
 
 At this point my Dad got involved:
 
-1. He used his practical knowledge to propose how _he_ would build a road like this that needs to support massive forces. Basically - deeper foundations with the biggest stone available in the bottom reducing in layers upwards.
-2. Arranged a quick prototype to the people who held the purse strings, in the form of a demonstration trench.
+1. He used his *practical knowledge* to propose how he would build a road like this that needs to support massive forces. Basically - deeper foundations with the biggest stone available in the bottom reducing in layers upwards.
+2. Arranged a *quick prototype* to the people who held the purse strings, in the form of a demonstration trench.
     - Starting at the foundation depth of the original road, then increasing to over double that, and testing by running the vehicles over it repeatedly. At 1 meter it fluidised, at 1.5 meters it was stable and at 2 meters it was solid.
-3. Time costs far more than materials in this situation, so keep it simple, but don't try to make it perfectly efficient - use large rocks, and deeper foundations than might actually be required.
-4. He stood up and took responsibility for the plan he was suggesting. In front of superiors and peers, he transparently explained what and why he would do this, took responsibility on his own shoulders, and gained the authority to proceed in just 3 days against a background of huge ongoing losses.
+3. Time costs far more than materials in this situation, so keep it simple, but *don't try to make it perfectly efficient* - use large rocks, and deeper foundations than might actually be required.
+4. He stood up and *took responsibility* for the plan he was suggesting. In front of superiors and peers, he transparently explained what and why he would do this, took responsibility on his own shoulders, and gained the authority to proceed in just 3 days against a background of huge ongoing losses.
 
 
 
@@ -71,7 +71,7 @@ And I'll leave you with another great quote - this time one of my Dad's own:
 
 ### And Just One More Thing
 
-If you ever get the change to walk around inside a SteelWorks, then jump at it. They're one of the most awe-inspiring places. Like being next to a man-made volcano.
+If you ever get the chance to walk around inside a SteelWorks, then jump at it. They're one of the most awe-inspiring places. Like standing inside a cathedral with a volcano erupting next to you.
 
 ![BOS Cathedral](/assets/bos-cathedral.jpg)
 
