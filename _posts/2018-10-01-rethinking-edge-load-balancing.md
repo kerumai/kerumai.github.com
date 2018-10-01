@@ -10,7 +10,7 @@ not_listed: false
 crosspost_to_medium: false
 ---
 
-I wrote up some of the whys, [hows and results of the load balancing improvements](https://medium.com/netflix-techblog/netflix-edge-load-balancing-695308b5548c) I've been working on recently on Edge systems at Netflix.
+I wrote up some of the [whys, hows and results of the load balancing improvements](https://medium.com/netflix-techblog/netflix-edge-load-balancing-695308b5548c) I've been working on recently on Edge systems at Netflix.
 
 I tried to include some of the overarching principles that we used when designing the system, as well as the real-world operational impact once it was in prod.
 
